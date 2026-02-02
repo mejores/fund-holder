@@ -1,0 +1,94 @@
+.success-notification-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.success-notification-content {
+  background: white;
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.success-icon {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  font-size: 32px;
+  color: white;
+  font-weight: bold;
+}
+
+.success-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 16px;
+}
+
+.success-message {
+  font-size: 16px;
+  color: #666;
+  margin: 0 0 24px;
+  line-height: 1.5;
+}
+
+.success-button {
+  padding: 12px 32px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.success-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.success-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(102, 126, 234, 0.4);
+}

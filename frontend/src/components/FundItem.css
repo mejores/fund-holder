@@ -1,0 +1,256 @@
+/* 电脑模式 - 全新设计 */
+.fund-item {
+  margin: 12px 0;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr auto;
+  gap: 20px;
+  align-items: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.fund-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+/* 左侧信息 */
+.fund-item-left {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.fund-item-name-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.fund-item-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+}
+
+.fund-item-code {
+  font-size: 14px;
+  color: #999;
+  font-weight: 500;
+  padding: 4px 8px;
+  background: #f5f5f5;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.fund-item-info {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.fund-item-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fund-item-info-label {
+  font-size: 12px;
+  color: #999;
+  font-weight: 500;
+}
+
+.fund-item-info-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.fund-item-info-value.positive {
+  color: #f5222d;
+}
+
+.fund-item-info-value.negative {
+  color: #52c41a;
+}
+
+/* 右侧市值 */
+.fund-item-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.fund-item-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1890ff;
+}
+
+.fund-item-value-label {
+  font-size: 13px;
+  color: #999;
+}
+
+/* 次级信息区域 */
+.fund-item-secondary {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.fund-item-stat {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.fund-item-stat-value {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.fund-item-stat-value.positive {
+  color: #f5222d;
+}
+
+.fund-item-stat-value.negative {
+  color: #52c41a;
+}
+
+/* 操作按钮 */
+.fund-item-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.fund-item-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.fund-item-btn.edit {
+  background: #e6f7ff;
+  color: #1890ff;
+}
+
+.fund-item-btn.edit:hover {
+  background: #1890ff;
+  color: white;
+}
+
+.fund-item-btn.delete {
+  background: #fff2f0;
+  color: #f5222d;
+  border: 1px solid #ffa39e;
+}
+
+.fund-item-btn.delete:hover {
+  background: #f5222d;
+  color: white;
+  border-color: #f5222d;
+}
+
+/* 响应式调整 - 中等屏幕 */
+@media (max-width: 1200px) {
+  .fund-item {
+    grid-template-columns: 2fr 1.5fr 1.5fr auto;
+    gap: 16px;
+  }
+
+  .fund-item-info {
+    gap: 16px;
+  }
+
+  .fund-item-secondary {
+    gap: 16px;
+  }
+}
+
+/* 响应式调整 - 大屏幕 */
+@media (min-width: 1400px) {
+  .fund-item {
+    grid-template-columns: 4fr 2fr 2fr auto;
+    gap: 32px;
+  }
+
+  .fund-item-info {
+    gap: 32px;
+  }
+
+  .fund-item-secondary {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fund-item {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .fund-holding,
+  .fund-performance {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .fund-actions {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .fund-holding,
+  .fund-performance {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .fund-actions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .fund-item {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .fund-holding,
+  .fund-performance {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .fund-actions {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .fund-holding,
+  .fund-performance {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .fund-actions {
+    flex-direction: column;
+  }
+}

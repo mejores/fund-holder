@@ -1,0 +1,343 @@
+.fund-detail {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.loading {
+  text-align: center;
+  padding: 50px;
+  font-size: 18px;
+}
+
+.fund-header {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fund-basic-info h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #1a1a1a;
+}
+
+.fund-code {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.fund-full-name {
+  font-size: 14px;
+  color: #999;
+}
+
+.fund-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.meta-item {
+  display: flex;
+  gap: 8px;
+}
+
+.meta-item .label {
+  font-weight: 600;
+  color: #666;
+}
+
+.fund-estimate {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fund-estimate h3 {
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.estimate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.estimate-item {
+  text-align: center;
+}
+
+.estimate-item .label {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.estimate-item .value {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.estimate-item.positive .value {
+  color: #f5222d;
+}
+
+.estimate-item.negative .value {
+  color: #52c41a;
+}
+
+.fund-history, .fund-holdings, .fund-managers {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fund-history h3, .fund-holdings h3, .fund-managers h3 {
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.history-chart {
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+table th {
+  background: #fafafa;
+  font-weight: 600;
+  color: #333;
+}
+
+table tr:hover {
+  background: #fafafa;
+}
+
+td.positive {
+  color: #f5222d;
+}
+
+td.negative {
+  color: #52c41a;
+}
+
+.fund-tabs-section {
+  margin-bottom: 30px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fund-tabs {
+  display: flex;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.fund-tab {
+  padding: 15px 25px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.fund-tab:hover {
+  color: #333;
+}
+
+.fund-tab.active {
+  color: #333;
+  font-weight: 600;
+}
+
+.fund-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #1890ff;
+}
+
+.fund-tab-content {
+  padding: 20px;
+}
+
+.no-data {
+  text-align: center;
+  padding: 50px 20px;
+  color: #999;
+  font-size: 16px;
+}
+
+/* 响应式设计 - 移动端优化 */
+@media (max-width: 768px) {
+  .fund-detail {
+    padding: 12px;
+    margin: 0;
+  }
+
+  .loading {
+    padding: 30px;
+    font-size: 16px;
+  }
+
+  .fund-header {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
+    padding: 16px;
+  }
+
+  .fund-basic-info h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .fund-code {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .fund-full-name {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .fund-meta {
+    gap: 8px;
+  }
+
+  .meta-item {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .meta-item .label {
+    font-size: 13px;
+  }
+
+  .fund-estimate {
+    margin-bottom: 20px;
+    padding: 16px;
+  }
+
+  .fund-estimate h3 {
+    font-size: 16px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .estimate-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .estimate-item .label {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+
+  .estimate-item .value {
+    font-size: 16px;
+  }
+
+  .fund-history, 
+  .fund-holdings, 
+  .fund-managers {
+    margin-bottom: 20px;
+    padding: 16px;
+  }
+
+  .fund-history h3, 
+  .fund-holdings h3, 
+  .fund-managers h3 {
+    font-size: 16px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .fund-tabs-section {
+    margin-bottom: 20px;
+  }
+
+  .fund-tab {
+    padding: 10px 15px;
+    font-size: 13px;
+  }
+
+  .fund-tab-content {
+    padding: 16px;
+  }
+
+  table {
+    font-size: 13px;
+  }
+
+  table th, table td {
+    padding: 8px;
+  }
+
+  table th {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fund-detail {
+    padding: 8px;
+  }
+
+  .fund-basic-info h2 {
+    font-size: 18px;
+  }
+
+  .estimate-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .estimate-item .label {
+    font-size: 11px;
+  }
+
+  .estimate-item .value {
+    font-size: 14px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  table th, table td {
+    padding: 6px;
+  }
+
+  table th {
+    font-size: 11px;
+  }
+}

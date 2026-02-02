@@ -1,0 +1,78 @@
+.fund-search {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+.search-box button {
+  padding: 12px 24px;
+  background: #1890ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.search-box button:hover:not(:disabled) {
+  background: #40a9ff;
+}
+
+.search-box button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.search-results ul {
+  list-style: none;
+  padding: 0;
+}
+
+.search-results li {
+  padding: 16px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.search-results li:hover {
+  border-color: #1890ff;
+  background: #f5f5f5;
+}
+
+.fund-info {
+  margin-bottom: 8px;
+}
+
+.fund-code {
+  color: #999;
+  margin-left: 8px;
+}
+
+.fund-details {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+  color: #666;
+}
+
+.no-results {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+}

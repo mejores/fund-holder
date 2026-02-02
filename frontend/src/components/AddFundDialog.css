@@ -1,0 +1,279 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #999;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+  background-color: #f5f5f5;
+  color: #666;
+}
+
+.modal-body {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.search-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.search-input-wrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.search-input-wrapper input {
+  flex: 1;
+  padding: 10px 16px;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.search-input-wrapper input:focus {
+  outline: none;
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.btn-search {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #1890ff;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-search:hover:not(:disabled) {
+  background-color: #40a9ff;
+}
+
+.btn-search:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.search-results {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #f0f0f0;
+  border-radius: 6px;
+}
+
+.fund-item {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fund-item:last-child {
+  border-bottom: none;
+}
+
+.fund-item:hover {
+  background-color: #fafafa;
+}
+
+.fund-item.selected {
+  background-color: #e6f7ff;
+  border-color: #1890ff;
+}
+
+.fund-item .fund-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fund-item .fund-name {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.fund-item .fund-code {
+  font-size: 12px;
+  color: #999;
+}
+
+.fund-item .fund-type {
+  font-size: 12px;
+  color: #666;
+}
+
+.holding-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.fund-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px;
+  background-color: #f5f5f5;
+  border-radius: 6px;
+}
+
+.fund-preview .fund-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.fund-preview .fund-code {
+  font-size: 14px;
+  color: #666;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px 16px;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.modal-footer {
+  padding: 16px 24px;
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.btn-cancel,
+.btn-submit {
+  padding: 8px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.btn-cancel {
+  background-color: #f0f0f0;
+  color: #666;
+}
+
+.btn-cancel:hover {
+  background-color: #e0e0e0;
+}
+
+.btn-submit {
+  background-color: #1890ff;
+  color: white;
+}
+
+.btn-submit:hover:not(:disabled) {
+  background-color: #40a9ff;
+}
+
+.btn-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    max-height: 90vh;
+  }
+
+  .search-input-wrapper {
+    flex-direction: column;
+  }
+
+  .btn-search {
+    width: 100%;
+  }
+}
