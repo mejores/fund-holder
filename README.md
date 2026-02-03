@@ -57,10 +57,10 @@ pip install -r requirements.txt
 
 ```bash
 cd backend
-python app.py
+uvicorn app:app --host 0.0.0.0 --port 8001 --reload
 ```
 
-后端服务将在 `http://localhost:8000` 运行。
+后端服务将在 `http://localhost:8001` 运行。
 
 ### 3. 安装前端依赖
 
@@ -77,6 +77,17 @@ npm run dev
 ```
 
 前端服务将在 `http://localhost:3000` 运行。
+
+## 手机访问
+
+如果需要在手机上访问应用：
+
+1. 确保手机和电脑连接到**同一个路由器**
+2. 获取电脑的局域网IP地址：`ipconfig`（Windows）或 `ifconfig`（Mac/Linux）
+3. 在手机浏览器中输入：`http://电脑IP地址:3000/`
+4. 就可以访问应用了
+
+例如：`http://192.168.5.58:3000/`
 
 ## API接口
 
